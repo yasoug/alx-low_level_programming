@@ -8,18 +8,18 @@
 int main(void)
 {
 	int i;
-	int a = 1;
-	int b = 2;
-	int sum = a + b;
+	unsigned long a = 1;
+	unsigned long b = 2;
+	unsigned long sum = a + b;
 
-	printf("%d, %d, ", a, b);
+	printf("%lu, %lu, ", a, b);
 	for (i = 3; i <= 49; i++)
 	{
-	printf("%d, ", sum);
+	printf("%lu, ", sum);
 		a = b;
 		b = sum;
 		sum = a + b;
 	}
-	printf("%d\n", sum);
+	printf("%lu\n", sum);
 	return (0);
 }
