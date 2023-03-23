@@ -16,7 +16,7 @@ int main(void)
 			div++;
 		else
 		{
-			n = n / 2;
+			n = n / div;
 			div = 2;
 		}
 	}
