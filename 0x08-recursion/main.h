@@ -9,4 +9,7 @@ int square_root(int n, int a);
 int _sqrt_recursion(int n);
 int division(int n, int d);
 int is_prime_number(int n);
+int is_palindrome(char *s);
+int _strlen(char *s);
+int compare(char *s, char *c);
 
