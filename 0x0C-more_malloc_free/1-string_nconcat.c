@@ -26,7 +26,7 @@ int _strlen(char *s)
  * Return: pointer to a string (s1 and s2), NULL if it fails
  */
 
-char *string_nconcat(char *s1, char *s2, unsigned int n);
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int i;
 	int j;
