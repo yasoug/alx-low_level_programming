@@ -10,14 +10,15 @@
 
 void _close(int fd1, int fd2)
 {
-	close(fd1);
-	if (close(fd1) == -1)
+	int p = close(fd1);
+
+	if (p == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd1);
 		exit(100);
 	}
-	close(fd2);
-	if (close(fd2) == -1)
+	p = close(fd2);
+	if (p == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd2);
 		exit(100);
@@ -67,7 +68,7 @@ int main(int argc, char **argv)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
-	} while (r);
+	} while (r == BYTE);
 
 	_close(fd1, fd2);
 
